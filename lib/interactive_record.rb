@@ -65,19 +65,19 @@ def save
   
 end
 
-# # executes the SQL to find a row by name
-# def self.find_by_name(name)
-#   sql = "SELECT * FROM #{table_name} WHERE name = '#{name}'"
+# executes the SQL to find a row by name
+def self.find_by_name(name)
+  sql = "SELECT * FROM #{table_name} WHERE name = '#{name}'"
     
-#   DB[:conn].execute(sql)
-# end
+  DB[:conn].execute(sql)
+end
 
-# # executes the SQL to find a row by the attribute passed into the method
-# # accounts for when an attribute value is an integer
-# def self.find_by(attributes) 
-#   sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0].to_s} = '#{attribute.values[0].to_s}'"
-#   DB[:conn].execute(sql)
-# end
+# executes the SQL to find a row by the attribute passed into the method
+# accounts for when an attribute value is an integer
+def self.find_by(attributes) 
+  sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0].to_s} = '#{attribute.values[0].to_s}'"
+  DB[:conn].execute(sql)
+end
 
 
     
