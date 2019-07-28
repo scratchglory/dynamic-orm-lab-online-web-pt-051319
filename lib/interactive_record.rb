@@ -53,7 +53,6 @@ def values_for_insert
     end
       values.join(", ")
 end
-      # binding.pry
 
 # saves the student to the db
 # [{"grade"=>11, "id"=>1, "name"=>"Sam"}]
