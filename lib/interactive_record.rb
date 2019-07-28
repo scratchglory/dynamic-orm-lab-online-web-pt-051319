@@ -75,7 +75,7 @@ end
 # executes the SQL to find a row by the attribute passed into the method
 # accounts for when an attribute value is an integer
 def self.find_by(attributes) 
-  sql = "SELECT * FROM #{self.table_name} WHERE #{attribute.keys[0].to_s} = '#{attribute.values[0].to_s}'"
+  sql = "SELECT * FROM #{self.table_name} WHERE #{attributes.keys[0].to_s} = '#{attributes.values[0].to_s}'"
   DB[:conn].execute(sql)
 end
 
